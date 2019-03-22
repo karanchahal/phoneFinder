@@ -205,7 +205,8 @@ def parse_dataset(dataset_path):
     return X, Y, imgs, img_paths
 
 # Prepare Dataset for training and validation
-X, Y, imgs, img_paths = parse_dataset('dataset')
+file_path = sys.argv[1] 
+X, Y, imgs, img_paths = parse_dataset(file_path)
 
 config = PhoneConfig()
 
