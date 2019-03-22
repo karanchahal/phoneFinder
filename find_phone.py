@@ -91,10 +91,18 @@ model_path = model.find_last()
 print("Loading weights from ", model_path)
 model.load_weights(model_path, by_name=True)
 
-    
-# TODO
+def load_image(file_path, config):
+    image = cv2.imread(file_path)
+    image, window, scale, padding, crop = utils.resize_image(
+        image,
+        min_dim=config.IMAGE_MIN_DIM,
+        min_scale=config.IMAGE_MIN_SCALE,
+        max_dim=config.IMAGE_MAX_DIM,
+        mode=config.IMAGE_RESIZE_MODE)
+    return image
+
 file_path = sys.argv[1] 
-original_image = cv2.imread(file_path)
+original_image = load_image(file_path)
 
 results = model.detect([original_image], verbose=1)
 r = results[0] # take 1st result
