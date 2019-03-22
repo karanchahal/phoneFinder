@@ -11,6 +11,7 @@ import time
 import matplotlib
 import matplotlib.pyplot as plt
 import tensorflow as tf
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 import skimage.draw as draw
 
 ROOT_DIR = os.path.relpath('Mask_RCNN')
@@ -88,7 +89,6 @@ model = modellib.MaskRCNN(mode="inference",
 model_path = model.find_last()
 
 # Load trained weights
-print("Loading weights from ", model_path)
 model.load_weights(model_path, by_name=True)
 
 def load_image(file_path, config):
@@ -104,7 +104,8 @@ def load_image(file_path, config):
 file_path = sys.argv[1] 
 original_image = load_image(file_path,config=inference_config)
 
-results = model.detect([original_image], verbose=1)
+results = model.detect([original_image], verbose=0)
 r = results[0] # take 1st result
 
-print(predict(r))
+x,y = predict(r)
+print(x,y)
