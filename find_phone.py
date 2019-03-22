@@ -93,7 +93,7 @@ model.load_weights(model_path, by_name=True)
 
     
 # TODO
-file_path = sys.argv[0] 
+file_path = sys.argv[1] 
 original_image = cv2.imread(file_path)
 
 results = model.detect([original_image], verbose=1)
