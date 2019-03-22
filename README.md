@@ -7,14 +7,13 @@ TO install those that colab doesnt have and to setup the project, run
 ```sh setup.sh```
 
 # Training the Model
-1. Run ```python train_phone_finder.py```
+1. Run ```python train_phone_finder.py <path-to-dataset>```
 
 # Running inference
 ```python find_phone.py <path-to-image>```
 
 ### Note
-This project assumes that an image from the dataset is used to run inference on, specifically the image is 490 by 326 in height and width.
-If someone wants to submit a pull request to make the code image shape invariant, they're most welcome :)
+This project assumes that an image from the dataset is used to run inference on, specifically the image is 490 by 326 in height and width. If someone wants to submit a pull request to make the code image shape invariant, they're most welcome :)
 
 ## Demo
 
