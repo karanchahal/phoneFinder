@@ -102,7 +102,7 @@ def load_image(file_path, config):
     return image
 
 file_path = sys.argv[1] 
-original_image = load_image(file_path)
+original_image = load_image(file_path,config=inference_config)
 
 results = model.detect([original_image], verbose=1)
 r = results[0] # take 1st result
