@@ -31,5 +31,5 @@ I would like to find out various metrics of the model to find how good the class
 Once I have this, I would be accurately be able to tell how good the model is. To make this phone detector better:
 1. I think a lighter object detector would be great. The SSD architecture boosted with the focal loss would theoretically give fast and accurate predictions. As the Mask RCNN is a 
 2 stage detector it is quite heavy to run even in the cloud.
-2. I would also request more data from the client in a variety of different loghting and background conditions
+2. I would also request more data from the client in a variety of different lighting and background conditions
 to make the detector more robust.
