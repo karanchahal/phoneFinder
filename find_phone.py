@@ -10,8 +10,9 @@ import re
 import time
 import matplotlib
 import matplotlib.pyplot as plt
-import tensorflow as tf
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
+
+import tensorflow as tf
 import skimage.draw as draw
 
 ROOT_DIR = os.path.relpath('Mask_RCNN')
