@@ -1,0 +1,3 @@
+scikit-image==0.14.2
+# Rest all the libraries are satisfied by Google colab. I recommend using 
+# colab to run this project
